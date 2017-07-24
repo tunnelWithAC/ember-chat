@@ -1,0 +1,24 @@
+<h4>Direct Messages</h4>
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-3">
+      select * from conversations where userID = ...
+      {{#each model as |user|}}
+        <div>
+          <p>{{user.name}}</p>
+        </div>
+
+      {{else}}
+        No chats available
+      {{/each}}
+    </div>
+    <div class="col-xs-9" style="border-left: 3px solid rgba(75,75,78,0.39);">
+
+      CONVERSATION HERE
+      <br><b>Sample:</b>
+      <br>From John - Hello <span style="color: rgba(0,9,85,0.44)">30 minutes ago</span>
+      <br>
+    </div>
+  </div>
+</div>

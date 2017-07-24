@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+      {{#each model as |message|}}
+        <div class="alert alert-warning alert-chat">
+          <p><span class="label label-warning label-user">{{message.from}}</span> {{message.text}}</p>
+        </div>
+      {{/each}}
+  </div>
+</div>
+
+{{text-input}}

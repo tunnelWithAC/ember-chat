@@ -1,0 +1,16 @@
+{{#each posts as |post index| }}
+  <div class="alert alert-warning alert-chat">
+    <p>
+      <span class="label label-warning label-user"><a>{{#nav-link-to 'conversation' post.id}}{{post.user}}{{/nav-link-to}}</a></span>
+      {{post.text}} {{!ID:{{index-counter index}}
+      <span style="float: right">Votes: {{post.votes}}
+      <button class="btn-group-sm"{{action 'upvote' post index}} disabled={{post.upvoted}}>Upvote</button>
+      <button {{action 'downvote' post}} disabled={{post.downvoted}}>Downvote</button>
+      </span>
+    </p>
+    <p>{{moment-from-now post.date}}</p>
+  </div>
+{{/each}}
+
+
+{{text-input}}

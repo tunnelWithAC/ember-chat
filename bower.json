@@ -1,0 +1,6 @@
+{
+  "name": "chat-app",
+  "dependencies": {
+    "firebase": "^2.1.0"
+  }
+}

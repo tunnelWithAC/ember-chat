@@ -1,0 +1,13 @@
+<div class="pull-right nav-links">
+  {{#link-to "index"}}Home{{/link-to}} |
+  {{#link-to "index"}}Original Chat{{/link-to}} |
+  {{#nav-link-to 'post'}}Posts{{/nav-link-to}} |
+  {{#if session.isAuthenticated}}
+    <button {{action 'logout'}}>Logout</button>
+  {{else}}
+    {{#link-to 'login'}}
+      Login
+    {{/link-to}}
+  {{/if}}
+
+</div>
